@@ -74,14 +74,15 @@ var sdk = new SDK();
 // sdk.setContent(document.getElementById("editor1").innerHTML);
 var htmlValue = CKEDITOR.instances['editor1'].getData();
 	alert(htmlValue);
+	sdk.setContent(htmlValue);
 	
 var i = 0;
 	
 	
 for (var i in CKEDITOR.instances) {
         CKEDITOR.instances[i].on('change', function() {
-	  
-	   sdk.setContent(CKEDITOR.instances.editor1.getData());
+	  alert('change');
+	   sdk.setContent(CKEDITOR.instances['editor1'].getData());
 	   			
 
 	});
