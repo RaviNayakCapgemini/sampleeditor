@@ -71,7 +71,9 @@ __webpack_require__(1);
 
 var SDK = __webpack_require__(19);
 var sdk = new SDK();
-sdk.setContent(document.getElementById("editor1").innerHTML);
+// sdk.setContent(document.getElementById("editor1").innerHTML);
+var htmlValue = CKEDITOR.instances['editor1'].getData();
+	alert(htmlValue);
 	
 var i = 0;
 	
